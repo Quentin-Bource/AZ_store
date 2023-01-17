@@ -1,3 +1,6 @@
+<?php
+session_start()
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +20,7 @@
                     <li class="product mr-2.5">Products</li>
                     <li class="contact ">Contact</li>
                 </ul>
-                </nav>
+            </nav>
                 <div class="">
                 <button class="panier"><img src="./assets//images//cart2.svg" alt="panier"></a></button>
                 <button class="login">Login</button>
@@ -68,8 +71,10 @@ foreach ($shoes as $shoe){
     echo "<div class =".$shoe['product']."></div>";
     echo "<img src=".$shoe['image_url']."><div>";
     echo '<p>'.$shoe['price'].'</p>';
-    echo '<button type="submit" class='.$shoe["id"].'>Add to card</button>';
+    echo "<form method='get' action='' >";
+    echo '<input type ="hidden" name="shoe_id"value="'.$shoe['id'].'">';
+    echo '<input type ="submit" name="shoe_id"value="Add to cart">';
 };
-$array= [];
-$submit= ($_GET['id']);
+
+$submit= ($_GET(['shoe_id']));
 
