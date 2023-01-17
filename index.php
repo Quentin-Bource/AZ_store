@@ -28,41 +28,46 @@
     </div>
     <div class="carroussel">
         <h3>Our last products</h3>
-        <div class="basket_1">
-            <a href=""><img src="./assets/images/Basket_1.png" alt="jordan rouge"></a>
-            <button type="submit">Add to card</button>
-        </div>
-        <div class="basket_2">
-            <a href=""><img src="./assets/images/Basket_2.png" alt=""></a>
-            <button type="submit">Add to card</button>
-        </div>
-        <div class="basket_3">
-        <a href=""><img src="./assets/images/Basket_3.png" alt=""></a>
-            <button type="submit">Add to card</button>
-        </div>
-        <div class="basket_4">
-        <a href=""><img src="./assets/images/Basket_4.png" alt=""></a>
-            <button type="submit">Add to card</button>
-        </div>
-        <div class="basket_5">
-        <a href=""><img src="./assets/images/Basket_5.png" alt=""></a>
-            <button type="submit">Add to card</button>
-        </div>
-        <div class="basket_6">
-        <a href=""><img src="./assets/images/Basket_6.png" alt=""></a>
-            <button type="submit">Add to card</button>
-        </div>
-        <div class="basket_7">
-        <a href=""><img src="./assets/images/Basket_7.png" alt=""></a>
-            <button type="submit">Add to card</button>
-        </div>
-        <div class="basket_8">
-        <a href=""><img src="./assets/images/Basket_8.png" alt=""></a>
-            <button type="submit">Add to card</button>
-        </div>
-
-
-    </div> 
-    
+    </div>
 </body>
 </html>
+
+<?php
+
+$shoes = 
+[
+    [
+        'id' => 0,
+        'product' => 'Nike Air Max 270',
+        'price' => "145 €",
+        'image_url' => './assets/images/Basket_1.png', 
+    ],
+    [
+        'id' => 1,
+        'product'=> 'Nike Air Max 275',
+        'price'=> "145 €",
+        'image_url'=> './assets/images/Basket_2.png',
+    ],
+    [
+        'id' => 2,
+        'product'=> 'Nike Air Max 280',
+        'price'=> "145 €",
+        'image_url'=> './assets/images/Basket_3.png',
+    ],
+    [
+        'id' => 3,
+        'product'=> 'Nike Air Max 285',
+        'price'=> "145 €",
+        'image_url'=> './assets/images/Basket_4.png',
+    ],
+];
+
+foreach ($shoes as $shoe){
+    echo "<div class =".$shoe['product']."></div>";
+    echo "<img src=".$shoe['image_url']."><div>";
+    echo '<p>'.$shoe['price'].'</p>';
+    echo '<button type="submit" class='.$shoe["id"].'>Add to card</button>';
+};
+$array= [];
+$submit= ($_GET['id']);
+
