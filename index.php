@@ -39,10 +39,9 @@ session_start()
 </html>
 
 <?php
-session_start(); 
+session_start();
 
-$shoes = 
-[
+$shoes = [
     [
         'id' => 0,
         'product' => 'Nike Air Max 270',
@@ -69,27 +68,17 @@ $shoes =
     ],
 ];
 
+
 foreach ($shoes as $shoe){
     echo "<div class =".$shoe['product']."></div>";
     echo "<img src=".$shoe['image_url']."><div>";
     echo '<p>'.$shoe['price'].'</p>';
-    echo '<form method="post">';
+    echo '<form method="post" >';
     echo '<input type="hidden" name="shoe_id" value="'.$shoe["id"].'">';
     echo '<input type="submit" name="add_to_cart" value="Add to Cart">';
-    echo '</form>';
+    echo '</form>'; 
 };
-
-
-// if (isset($_POST['add_to_cart'])) {
-//     $shoe_id = $_POST['shoe_id'];
-//     if (!isset($_SESSION['cart'])) {
-//         $_SESSION['cart'] = array();
-//     }
-//     array_push($_SESSION['cart'], $shoes[$shoe_id]);
-// };
-// echo '<pre>';
-// print_r($_SESSION['cart']);
-// echo '</pre>';
+require("add-to-cart.php");
 
 ?>
 
