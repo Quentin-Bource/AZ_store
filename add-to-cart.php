@@ -9,4 +9,5 @@ if(isset($_POST['add_to_cart'])) {
     $shoe = $shoes[$shoe_id];
     array_push($_SESSION['cart'], $shoe);
     header("Location: index.php");
+ 
 }

@@ -79,6 +79,7 @@ foreach ($shoes as $shoe){
 };
 require("add-to-cart.php");
 
+print_r ($_SESSION['cart']);
 ?>
 
 
