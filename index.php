@@ -77,17 +77,16 @@ foreach ($shoes as $shoe){
 };
 
 
-if (isset($_POST['add_to_cart'])) {
-    $shoe_id = $_POST['shoe_id'];
-    if (!isset($_SESSION['cart'])) {
-        $_SESSION['cart'] = array();
-    }
-    array_push($_SESSION['cart'], $shoes[$shoe_id]);
-    echo 'Shoe added to cart.';
-};
-echo '<pre>';
-print_r($_SESSION['cart']);
-echo '</pre>';
+// if (isset($_POST['add_to_cart'])) {
+//     $shoe_id = $_POST['shoe_id'];
+//     if (!isset($_SESSION['cart'])) {
+//         $_SESSION['cart'] = array();
+//     }
+//     array_push($_SESSION['cart'], $shoes[$shoe_id]);
+// };
+// echo '<pre>';
+// print_r($_SESSION['cart']);
+// echo '</pre>';
 
 ?>
 
