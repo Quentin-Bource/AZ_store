@@ -7,20 +7,22 @@
     <link href="output.css" rel="stylesheet" type="text/css">
     <title>A-Z Store</title>
 </head>
-<body class="bg-gray-900 text-white">
-    <header class="grid grid-cols-3 grid-rows-1 ">
-            <h2 class="grid col-span-1 grid-rows-1">AZ[Store]</h2>
-            <nav class="navbar grid col-span-2 grid-rows-1">
-                <ul>
-                    <li class="home">Home</li>
-                    <li class="about">About</li>
-                    <li class="product">Products</li>
-                    <li class="contact">Contact</li>
+<body class="bg-gray-900 text-white ">
+    <header class="flex flex-row justify-around pt-5 font-serif">
+            <h2 class="">AZ[Store]</h2>
+            <nav class="navbar mr-5 ml-5">
+                <ul class="flex flex-row ">
+                    <li class="home mr-2.5">Home</li>
+                    <li class="about mr-2.5 ">About</li>
+                    <li class="product mr-2.5">Products</li>
+                    <li class="contact ">Contact</li>
                 </ul>
-                <button class="panier grid col-span-3 grid-rows-1"><img src="./assets//images//cart2.svg" alt="panier"></a></button>
-                <button class="login grid col-span-3 grid-rows-1">Login</button>
-
-            </nav>
+                </nav>
+                <div class="">
+                <button class="panier"><img src="./assets//images//cart2.svg" alt="panier"></a></button>
+                <button class="login">Login</button>
+                </div>
+            
     </header>
     <div class="bg" >
         <h2>Shoe the right one.</h2>
@@ -44,7 +46,7 @@
         <a href=""><img src="./assets/images/Basket_4.png" alt=""></a>
             <button type="submit">Add to card</button>
         </div>
-        <div class="basket_5">
+        <!-- <div class="basket_5">
         <a href=""><img src="./assets/images/Basket_5.png" alt=""></a>
             <button type="submit">Add to card</button>
         </div>
@@ -59,7 +61,7 @@
         <div class="basket_8">
         <a href=""><img src="./assets/images/Basket_8.png" alt=""></a>
             <button type="submit">Add to card</button>
-        </div>
+        </div> -->
 
 
     </div> 
