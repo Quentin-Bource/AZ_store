@@ -70,8 +70,7 @@ $shoes = [
 
 
 foreach ($shoes as $shoe){
-    echo "<div class =".$shoe['product']."></div>";
-    echo "<img src=".$shoe['image_url']."><div>";
+    echo '<div class="'.$shoe['product'].'">';    echo "<img src=".$shoe['image_url']."><div>";
     echo '<p>'.$shoe['price'].'</p>';
     echo '<form method="post" >';
     echo '<input type="hidden" name="shoe_id" value="'.$shoe["id"].'">';
