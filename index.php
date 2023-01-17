@@ -8,7 +8,7 @@
     <title>A-Z Store</title>
 </head>
 <body class="bg-gray-900 text-white ">
-    <header class="flex flex-row justify-around pt-5 font-serif">
+    <header class="flex flex-row justify-around pt-5 font-serif pb-3">
             <h2 class="">AZ[Store]</h2>
             <nav class="navbar mr-5 ml-5">
                 <ul class="flex flex-row ">
@@ -19,11 +19,12 @@
                 </ul>
                 </nav>
                 <div class="">
-                <button class="panier"><img src="./assets//images//cart2.svg" alt="panier"></a></button>
+                <button class="panier w-5"><img src="./assets//images//cart2.svg" alt="panier"></a></button>
                 <button class="login">Login</button>
                 </div>
             
     </header>
+    <hr>
     <div class="bg" >
         <h2>Shoe the right one.</h2>
         <button class="store"><a href="">Aller vous faire foutre</a></button>
@@ -35,6 +36,7 @@
 </html>
 
 <?php
+session_start(); 
 
 $shoes = 
 [
@@ -68,8 +70,25 @@ foreach ($shoes as $shoe){
     echo "<div class =".$shoe['product']."></div>";
     echo "<img src=".$shoe['image_url']."><div>";
     echo '<p>'.$shoe['price'].'</p>';
-    echo '<button type="submit" class='.$shoe["id"].'>Add to card</button>';
+    echo '<form method="post">';
+    echo '<input type="hidden" name="shoe_id" value="'.$shoe["id"].'">';
+    echo '<input type="submit" name="add_to_cart" value="Add to Cart">';
+    echo '</form>';
 };
-$array= [];
-$submit= ($_GET['id']);
+
+
+if (isset($_POST['add_to_cart'])) {
+    $shoe_id = $_POST['shoe_id'];
+    if (!isset($_SESSION['cart'])) {
+        $_SESSION['cart'] = array();
+    }
+    array_push($_SESSION['cart'], $shoes[$shoe_id]);
+    echo 'Shoe added to cart.';
+};
+echo '<pre>';
+print_r($_SESSION['cart']);
+echo '</pre>';
+
+?>
+
 
