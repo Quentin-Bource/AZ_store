@@ -73,14 +73,6 @@ foreach ($shoes as $shoe){
     echo "<div class =".$shoe['product']."></div>";
     echo "<img src=".$shoe['image_url']."><div>";
     echo '<p>'.$shoe['price'].'</p>';
-<<<<<<< HEAD
-    echo "<form method='get' action='' >";
-    echo '<input type ="hidden" name="shoe_id"value="'.$shoe['id'].'">';
-    echo '<input type ="submit" name="shoe_id"value="Add to cart">';
-};
-
-$submit= ($_GET(['shoe_id']));
-=======
     echo '<form method="post">';
     echo '<input type="hidden" name="shoe_id" value="'.$shoe["id"].'">';
     echo '<input type="submit" name="add_to_cart" value="Add to Cart">';
@@ -102,5 +94,4 @@ echo '</pre>';
 
 ?>
 
->>>>>>> 2c907ebf14284c21163da4044441e837f3c52fc4
 
