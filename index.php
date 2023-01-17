@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A-Z Store</title>
 </head>
-<body>
+<body class="bg-orange-200">
     <header>
             <h2>AZ[Store]</h2>
             <nav class="navbar">
