@@ -22,7 +22,13 @@
 
             </nav>
     </header>
-
+    <div class="bg" >
+        <h2>Shoe the right one.</h2>
+        <button class="store"><a href="">Aller vous faire foutre</a></button>
+    </div>
+    <div class="carroussel">
+        <h3>Our last products</h3>
+    </div> 
     
 </body>
 </html>
