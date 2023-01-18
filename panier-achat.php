@@ -13,10 +13,10 @@
 <?php 
 if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])){
     foreach($_SESSION['cart'] as $shoe){
-        echo '<div class="'.$shoe['product'].'">';    
+        echo '<div class="'.$shoe['product'].'">';
+        //echo '<p>'.$shoe['product'].'</p>';
         echo "<img src=".$shoe['image_url']."><div>";
         echo '<p>'.$shoe['price'].'</p>';
-
     }
 } else {
     echo "Le panier est vide ! ";
