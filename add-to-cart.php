@@ -1,6 +1,6 @@
 <?php
-// Create cart array if it doesn't exist
-if(!isset($_SESSION['cart'])) {
+
+if(isset($_SESSION['cart'])) {
     $_SESSION['cart'] = array();
 }
 
@@ -9,5 +9,5 @@ if(isset($_POST['add_to_cart'])) {
     $shoe = $shoes[$shoe_id];
     array_push($_SESSION['cart'], $shoe);
     header("Location: index.php");
- 
 }
+

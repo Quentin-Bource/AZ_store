@@ -71,16 +71,17 @@ $shoes =
         ],
     ];
 
-foreach ($shoes as $shoe) {
-    echo "<div class =" . $shoe['product'] . "></div>";
-    echo "<img src=" . $shoe['image_url'] . "><div>";
-    echo '<p>' . $shoe['price'] . '</p>';
-    echo '<form method="post">';
-    echo '<input type="hidden" name="shoe_id" value="' . $shoe["id"] . '">';
+
+foreach ($shoes as $shoe){
+    echo '<div class="'.$shoe['product'].'">';    
+    echo "<img src=".$shoe['image_url']."><div>";
+    echo '<p>'.$shoe['price'].'</p>';
+    echo '<form method="post" >';
+    echo '<input type="hidden" name="shoe_id" value="'.$shoe["id"].'">';
     echo '<input type="submit" name="add_to_cart" value="Add to Cart">';
     echo '</form>';
 };
 require("add-to-cart.php");
 
-print_r($_SESSION['cart']);
+print_r ($_SESSION['cart']);
 ?>
