@@ -29,7 +29,7 @@ session_start()
         </div>
 
     </header>
-    <hr>
+    <hr class="">
     <div class="bg">
         <h2>Shoe the right one.</h2>
         <button class="store"><a href="">Aller vous faire foutre</a></button>
