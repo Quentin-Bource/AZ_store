@@ -561,6 +561,10 @@ video {
   margin-right: 2.25rem;
 }
 
+.mr-8 {
+  margin-right: 2rem;
+}
+
 .flex {
   display: flex;
 }
