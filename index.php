@@ -76,13 +76,14 @@ require("add-to-cart.php");
 
 foreach ($shoes as $shoe) {
     echo '<div class="' . $shoe['product'] . '">';
-    echo "<img src=" . $shoe['image_url'] . "><div>";
+    echo "<img src=" . $shoe['image_url'] . ">";
     echo '<p>' . $shoe['product'] . '</p>';
     echo '<p>' . $shoe['price'] . '</p>';
     echo '<form method="post">';
     echo '<input type="hidden" name="shoe_id" value="' . $shoe["id"] . '">';
     echo '<input type="submit" name="add_to_cart" value="Add to Cart">';
     echo '</form>';
+    echo "</div>";
 };
 
 
