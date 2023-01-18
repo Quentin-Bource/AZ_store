@@ -39,7 +39,6 @@ session_start()
 </html>
 
 <?php
-session_start();
 
 $shoes = [
     [
@@ -70,7 +69,8 @@ $shoes = [
 
 
 foreach ($shoes as $shoe){
-    echo '<div class="'.$shoe['product'].'">';    echo "<img src=".$shoe['image_url']."><div>";
+    echo '<div class="'.$shoe['product'].'">';    
+    echo "<img src=".$shoe['image_url']."><div>";
     echo '<p>'.$shoe['price'].'</p>';
     echo '<form method="post" >';
     echo '<input type="hidden" name="shoe_id" value="'.$shoe["id"].'">';
@@ -78,8 +78,7 @@ foreach ($shoes as $shoe){
     echo '</form>'; 
 };
 require("add-to-cart.php");
-
-print_r ($_SESSION['cart']);
+require("panier-achat.php")
 ?>
 
 
