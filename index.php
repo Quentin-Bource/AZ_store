@@ -23,7 +23,7 @@ session_start()
                 <li class="contact ">Contact</li>
             </ul>
         </nav>
-        <div class="">
+        <div class="flex flex-row">
             <form action="panier-achat.php">
                 <button class="panier w-5"><img src="./assets//images//cart2.svg" alt="panier"></a></button>
             </form>
