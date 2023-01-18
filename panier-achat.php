@@ -29,24 +29,28 @@ session_start();
 
     </header>
     <hr class="ligne border-gray-600">
+    <div class="all_basket">
+        <?php
+            require ("buttonremove.php");
+            require("add-to-cart.php");
+
+            if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) { 
+                echo "<form method='post'>";
+                foreach ($_SESSION['cart'] as $key=> $shoe) {
+                    echo '<div class="' . $shoe['product'] . '">';
+                    echo "<img src=" . $shoe['image_url'] . " class='w-24'>";
+                    echo '<p>' . $shoe['product'] . '</p>';
+                    echo '<p>' . $shoe['price'] . '</p>';
+                    echo '<input type="submit" value="Supprimer" name="remove'.$shoe['id'].'">';
+                    echo "</div>";
+                }
+             echo "</form>";
+            } else {
+                echo "Le panier est vide ! ";
+            };
+        ?>
+        </div>
+        
 </body>
 
 </html>
-<?php
-require("add-to-cart.php");
-
-if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) { 
-    echo "<form method='post'>";
-    foreach ($_SESSION['cart'] as $key=> $shoe) {
-        echo '<div class="' . $shoe['product'] . '">';
-        echo "<img src=" . $shoe['image_url'] . ">";
-        echo '<p>' . $shoe['product'] . '</p>';
-        echo '<p>' . $shoe['price'] . '</p>';
-        echo '<input type="submit" value="Supprimer" name="remove'.$shoe['id'].'">';
-        echo "</div>";
-    }
-    echo "</form>";
-} else {
-    echo "Le panier est vide ! ";
-};
-?>

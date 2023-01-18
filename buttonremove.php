@@ -1,5 +1,4 @@
 <?php
-require ('panier-achat.php');
 if(isset($_POST))
 {
     foreach ($_POST as $key => $value)
