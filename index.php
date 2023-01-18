@@ -13,32 +13,36 @@ session_start()
 </head>
 
 <body class="bg-gray-900 text-white ">
-    <header class="flex flex-row justify-around pt-5 font-serif pb-3">
-        <h2 class="">AZ[Store]</h2>
+    <header class="flex flex-row justify-around pt-5 font-serif pb-3 text-xl">
+        <form action="index.php">
+            <button class="">AZ[Store]</button>
+        </form>
         <nav class="navbar mr-5 ml-5">
             <ul class="flex flex-row ">
-                <li class="home mr-2.5">Home</li>
-                <li class="about mr-2.5 ">About</li>
-                <li class="product mr-2.5">Products</li>
+                <li class="home mr-9">Home</li>
+                <li class="about mr-9 ">About</li>
+                <li class="product mr-9">Products</li>
                 <li class="contact ">Contact</li>
             </ul>
         </nav>
         <div class="flex flex-row">
             <form action="panier-achat.php">
-                <button class="panier w-5"><img src="./assets//images//cart2.svg" alt="panier"></a></button>
+                <button class="panier w-5"><img class="text-center w-5" src="./assets/images/cart2.svg" alt="panier"></a></button>
             </form>
-            <button class="login">Login</button>
+            <button class="login pl-9">Login</button>
         </div>
 
     </header>
-    <hr class="">
-    <div class="bg">
-        <h2>Shoe the right one.</h2>
-        <button class="store"><a href="">Aller vous faire foutre</a></button>
-    </div>
-    <div class="carroussel">
-        <h3>Our last products</h3>
-    </div>
+    <hr class="ligne border-gray-600">
+    <main>
+        <div class="bg">
+            <h2>Shoe the right one.</h2>
+            <button class="store"><a href="">Aller vous faire foutre</a></button>
+        </div>
+        <div class="carroussel">
+            <h3>Our last products</h3>
+        </div>
+    </main>
 </body>
 
 </html>
