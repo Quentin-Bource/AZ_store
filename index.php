@@ -24,7 +24,9 @@ session_start()
             </ul>
         </nav>
         <div class="">
-            <button class="panier w-5"><img src="./assets//images//cart2.svg" alt="panier"></a></button>
+            <form action="panier-achat.php">
+                <button class="panier w-5"><img src="./assets//images//cart2.svg" alt="panier"></a></button>
+            </form>
             <button class="login">Login</button>
         </div>
 

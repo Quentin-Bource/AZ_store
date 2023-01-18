@@ -30,7 +30,7 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
 } else {
     echo "Le panier est vide ! ";
 };
-print_r($_SESSION['cart'])
+// print_r($_SESSION['cart'])
 
 
 ?>
