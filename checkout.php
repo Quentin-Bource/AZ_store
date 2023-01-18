@@ -36,7 +36,26 @@ session_start();
     <h2 class="text-xl pb-4 pt-2">Checkout</h2>
 
     <div id="products">
-        <div id="product"></div>
+        <div id="product">
+
+<?php
+require("add-to-cart.php");
+//require("panier-achat.php");
+
+if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) { 
+    echo "<form method='post' class='flex flex-col items-center'>";
+    foreach ($_SESSION['cart'] as $key=> $shoe) {
+        echo '<div class="bg-gray-800 max-w-xl flex flex-col items-center rounded-lg p-5 ' . $shoe['product'] . ' pb-5 mb-4 mt-2">';
+        echo "<img  src=" . $shoe['image_url'] . " class='w-40 ' >";
+        echo '<p class="text-base mb-2">'  . $shoe['product'] . '</p>';
+        echo '<p>' . $shoe['price'] . '</p>';
+        echo '<input class=" m-3 rounded-lg bg-blue-500 hover:bg-blue-700 active:bg-blue-900 pl-4 pr-4" type="submit" value="Supprimer" name="remove'.$shoe['id'].'">';
+        echo "</div>";
+    }
+    echo "</form>";
+}
+?>
+        </div>
     </div>
 
 
@@ -84,6 +103,8 @@ session_start();
     </form>
 
     <?php
+
+
 
     // we initiate an array that will contain any potential errors.
 
@@ -166,7 +187,7 @@ session_start();
 
 
             if (count($errors) === 0) {
-                echo '<p class="text-sm italic p-2">Correct data</p>';
+                echo '<p class="text-base italic p-2">Merci pour votre commande !</p>';
             } else {
 
                 foreach ($errors as $error) {
@@ -180,25 +201,7 @@ session_start();
 
     ?>
 
-    <div class='bg-gray-600/50 w-80 rounded-lg p-3'>
-        <?php
-        echo "<h2 class='pb-3 text-xl' >Your Input :</h2>";
-        echo $firstname;
-        echo "<br class='leading-8'>";
-        echo $name;
-        echo "<br class='leading-8'>";
-        echo $email;
-        echo "<br class='leading-8'>";
-        echo $address;
-        echo "<br class='leading-8'>";
-        echo $zipcode;
-        echo "<br class='leading-8'>";
-        echo $city;
-        echo "<br class='leading-8'>";
-        echo $country;
-        ?>
-    </div>
-
+  
 </body>
 
 </html>
