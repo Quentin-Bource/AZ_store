@@ -15,7 +15,7 @@ session_start();
 
 <body class=" bg-gray-900 text-white font-sans ml-7 ">
 
-<header class="flex flex-row justify-around pt-5 font-sans pb-3">
+    <header class="flex flex-row justify-around pt-5 font-sans pb-3">
         <h2 class="">AZ[Store]</h2>
         <nav class="navbar mr-5 ml-5">
             <ul class="flex flex-row ">
@@ -42,7 +42,7 @@ session_start();
 
     <form method="POST" action="checkout.php" class="leading-8 ml-8 pb-4">
         <p>
-            <label class="text-white w-48 " for="name">Firstname</label>
+            <label class="w-48 " for="name">Firstname</label>
             <input class="bg-gray-600 rounded-lg ml-3 mb-3" type="text" name="firstname" placeholder="  Firstname" id='firstname' required><br>
         </p>
 
@@ -64,7 +64,7 @@ session_start();
         <p>
             <label for="zipcode">Zip Code</label>
             <input class="bg-gray-600 rounded-lg ml-5 mb-3" type="text" pattern="[0-9]*" name="zipcode" placeholder="  Zip-code" id="zipcode" maxlength="6" minlength="4" required><br>
-        </p> 
+        </p>
 
         <p>
             <label for="name">City</label>
@@ -164,11 +164,11 @@ session_start();
 
 
 
-           
+
             if (count($errors) === 0) {
                 echo '<p class="text-sm italic p-2">Correct data</p>';
             } else {
-                
+
                 foreach ($errors as $error) {
                     echo $error . "<br>";
                 }
@@ -176,28 +176,28 @@ session_start();
             }
         }
     }
-   
+
 
     ?>
 
-<div class='bg-gray-600/50 w-80 rounded-lg p-3'>
-    <?php
-    echo "<h2 class='pb-3 text-xl' >Your Input :</h2>";
-    echo $firstname;
-    echo "<br class='leading-8'>";
-    echo $name;
-    echo "<br class='leading-8'>";
-    echo $email;
-    echo "<br class='leading-8'>";
-    echo $address;
-    echo "<br class='leading-8'>";
-    echo $zipcode;
-    echo "<br class='leading-8'>";
-    echo $city;
-    echo "<br class='leading-8'>";
-    echo $country;
-    ?>
-</div>
+    <div class='bg-gray-600/50 w-80 rounded-lg p-3'>
+        <?php
+        echo "<h2 class='pb-3 text-xl' >Your Input :</h2>";
+        echo $firstname;
+        echo "<br class='leading-8'>";
+        echo $name;
+        echo "<br class='leading-8'>";
+        echo $email;
+        echo "<br class='leading-8'>";
+        echo $address;
+        echo "<br class='leading-8'>";
+        echo $zipcode;
+        echo "<br class='leading-8'>";
+        echo $city;
+        echo "<br class='leading-8'>";
+        echo $country;
+        ?>
+    </div>
 
 </body>
 
