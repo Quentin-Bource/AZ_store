@@ -42,7 +42,6 @@ session_start()
 </html>
 
 <?php
-session_start();
 
 $shoes =
     [
