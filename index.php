@@ -39,58 +39,55 @@ session_start()
             <h2>Shoe the right one.</h2>
             <button class="store"><a href="">Aller vous faire foutre</a></button>
         </div>
-        <div class="carroussel">
-            <h3>Our last products</h3>
+        <h3>Our last products</h3>
+        <div class="carroussel flex flex-row">
+
+            <?php
+
+            $shoes =
+                [
+                    [
+                        'id' => 0,
+                        'product' => 'Nike Air Max 270',
+                        'price' => "145 €",
+                        'image_url' => './assets/images/Basket_1.png',
+                    ],
+                    [
+                        'id' => 1,
+                        'product' => 'Nike Air Max 275',
+                        'price' => "145 €",
+                        'image_url' => './assets/images/Basket_2.png',
+                    ],
+                    [
+                        'id' => 2,
+                        'product' => 'Nike Air Max 280',
+                        'price' => "145 €",
+                        'image_url' => './assets/images/Basket_3.png',
+                    ],
+                    [
+                        'id' => 3,
+                        'product' => 'Nike Air Max 285',
+                        'price' => "145 €",
+                        'image_url' => './assets/images/Basket_4.png',
+                    ],
+                ];
+            require("add-to-cart.php");
+
+            foreach ($shoes as $shoe) {
+                echo '<div class="' . $shoe['product'] . ' w-25">';
+                echo "<img src=" . $shoe['image_url'] . " class='w-20'>";
+                echo '<p class="nom text-xl">' . $shoe['product'] . '</p>';
+                echo '<p>' . $shoe['price'] . '</p>';
+                echo '<form method="post">';
+                echo '<input type="hidden" name="shoe_id" value="' . $shoe["id"] . '">';
+                echo '<input type="submit" name="add_to_cart" value="Add to Cart">';
+                echo '</form>';
+                echo "</div>";
+            };
+
+            ?>
         </div>
     </main>
 </body>
 
 </html>
-
-<?php
-
-$shoes =
-    [
-        [
-            'id' => 0,
-            'product' => 'Nike Air Max 270',
-            'price' => "145 €",
-            'image_url' => './assets/images/Basket_1.png',
-        ],
-        [
-            'id' => 1,
-            'product' => 'Nike Air Max 275',
-            'price' => "145 €",
-            'image_url' => './assets/images/Basket_2.png',
-        ],
-        [
-            'id' => 2,
-            'product' => 'Nike Air Max 280',
-            'price' => "145 €",
-            'image_url' => './assets/images/Basket_3.png',
-        ],
-        [
-            'id' => 3,
-            'product' => 'Nike Air Max 285',
-            'price' => "145 €",
-            'image_url' => './assets/images/Basket_4.png',
-        ],
-    ];
-require("add-to-cart.php");
-
-foreach ($shoes as $shoe) {
-    echo '<div class="' . $shoe['product'] . '">';
-    echo "<img src=" . $shoe['image_url'] . ">";
-    echo '<p>' . $shoe['product'] . '</p>';
-    echo '<p>' . $shoe['price'] . '</p>';
-    echo '<form method="post">';
-    echo '<input type="hidden" name="shoe_id" value="' . $shoe["id"] . '">';
-    echo '<input type="submit" name="add_to_cart" value="Add to Cart">';
-    echo '</form>';
-    echo "</div>";
-};
-
-
-
-
-?>

@@ -33,16 +33,17 @@ session_start();
 
 </html>
 <?php
+require('buttonremove.php');
 require("add-to-cart.php");
 
-if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) { 
+if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
     echo "<form method='post'>";
-    foreach ($_SESSION['cart'] as $key=> $shoe) {
+    foreach ($_SESSION['cart'] as $key => $shoe) {
         echo '<div class="' . $shoe['product'] . '">';
         echo "<img src=" . $shoe['image_url'] . ">";
         echo '<p>' . $shoe['product'] . '</p>';
         echo '<p>' . $shoe['price'] . '</p>';
-        echo '<input type="submit" value="Supprimer" name="remove'.$shoe['id'].'">';
+        echo '<input type="submit" value="Supprimer" name="remove' . $shoe['id'] . '">';
         echo "</div>";
     }
     echo "</form>";
