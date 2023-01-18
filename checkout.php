@@ -13,56 +13,73 @@ session_start();
 
 </head>
 
-<body class="bg bg-gray-900 text-red ">
+<body class=" bg-gray-900 text-white font-sans ml-7 ">
 
-    <h2>Checkout</h2>
+<header class="flex flex-row justify-around pt-5 font-sans pb-3">
+        <h2 class="">AZ[Store]</h2>
+        <nav class="navbar mr-5 ml-5">
+            <ul class="flex flex-row ">
+                <li class="home mr-2.5">Home</li>
+                <li class="about mr-2.5 ">About</li>
+                <li class="product mr-2.5">Products</li>
+                <li class="contact ">Contact</li>
+            </ul>
+        </nav>
+        <div class="">
+            <button class="panier w-5"><img src="./assets//images//cart2.svg" alt="panier"></a></button>
+            <button class="login">Login</button>
+        </div>
+
+    </header>
+    <hr>
+
+    <h2 class="text-xl pb-4 pt-2">Checkout</h2>
 
     <div id="products">
         <div id="product"></div>
     </div>
 
 
-    <form method="POST" action="checkout.php">
-
+    <form method="POST" action="checkout.php" class="leading-8 ml-8 pb-4">
         <p>
-            <label for="name">Firstname</label>
-            <input type="text" name="firstname" placeholder="Firstname" id='firstname' required><br>
+            <label class="text-white w-48 " for="name">Firstname</label>
+            <input class="bg-gray-600 rounded-lg ml-3 mb-3" type="text" name="firstname" placeholder="  Firstname" id='firstname' required><br>
         </p>
 
         <p>
             <label for="name">Name</label>
-            <input type="text" name="name" placeholder="Name" id="name" required><br>
+            <input class="bg-gray-600 rounded-lg ml-10 mb-3" type="text" name="name" placeholder="  Name" id="name" required><br>
         </p>
 
         <p>
             <label for="name">E-mail</label>
-            <input type="text" name="email" placeholder="E-mail" id="email" required><br>
+            <input class="bg-gray-600 rounded-lg ml-10 mb-3" type="text" name="email" placeholder="  E-mail" id="email" required><br>
         </p>
 
         <p>
             <label for="name">Address</label>
-            <input type="text" name="address" placeholder="Address" id="address" required><br>
+            <input class="bg-gray-600 rounded-lg ml-6 mb-3" type="text" name="address" placeholder="  Address" id="address" required><br>
         </p>
 
         <p>
             <label for="zipcode">Zip Code</label>
-            <input type="text" pattern="[0-9]*" name="zipcode" placeholder="Zip-code" id="zipcode" maxlength="6" minlength="4" required><br>
-        </p>
+            <input class="bg-gray-600 rounded-lg ml-5 mb-3" type="text" pattern="[0-9]*" name="zipcode" placeholder="  Zip-code" id="zipcode" maxlength="6" minlength="4" required><br>
+        </p> 
 
         <p>
             <label for="name">City</label>
-            <input type="text" name="city" placeholder="City" id="city" required><br>
+            <input class="bg-gray-600 rounded-lg ml-14 mb-3" type="text" name="city" placeholder="  City" id="city" required><br>
         </p>
 
         <label for="country">Country</label>
-        <select id="country" name="country" required>
-            <option value="Belgium">Belgium</option>
-            <option value="France">France</option>
-            <option value="Germany">Germany</option>
-            <option value="Netherlands">Netherland</option>
+        <select class="bg-gray-600 rounded-lg ml-7 mb-3 p-2" id="country" name="country" required>
+            <option value=" Belgium">Belgium</option>
+            <option value=" France">France</option>
+            <option value=" Germany">Germany</option>
+            <option value=" Netherlands">Netherland</option>
         </select>
 
-        <input type="submit" name="submit" value="Submit">
+        <input class="ml-3 rounded-lg bg-blue-500 hover:bg-blue-700 active:bg-blue-900 pl-4 pr-4" type="submit" name="submit" value="Submit">
 
     </form>
 
@@ -149,7 +166,7 @@ session_start();
 
            
             if (count($errors) === 0) {
-                echo 'Correct data';
+                echo '<p class="text-sm italic p-2">Correct data</p>';
             } else {
                 
                 foreach ($errors as $error) {
@@ -163,23 +180,24 @@ session_start();
 
     ?>
 
+<div class='bg-gray-600/50 w-80 rounded-lg p-3'>
     <?php
-    echo "<h2>Your Input:</h2>";
+    echo "<h2 class='pb-3 text-xl' >Your Input :</h2>";
     echo $firstname;
-    echo "<br>";
+    echo "<br class='leading-8'>";
     echo $name;
-    echo "<br>";
+    echo "<br class='leading-8'>";
     echo $email;
-    echo "<br>";
+    echo "<br class='leading-8'>";
     echo $address;
-    echo "<br>";
+    echo "<br class='leading-8'>";
     echo $zipcode;
-    echo "<br>";
+    echo "<br class='leading-8'>";
     echo $city;
-    echo "<br>";
+    echo "<br class='leading-8'>";
     echo $country;
     ?>
-
+</div>
 
 </body>
 
