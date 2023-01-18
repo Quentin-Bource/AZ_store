@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_SESSION['cart'])) {
+if(!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = array();
 }
 
@@ -10,4 +10,3 @@ if(isset($_POST['add_to_cart'])) {
     array_push($_SESSION['cart'], $shoe);
     header("Location: index.php");
 }
-

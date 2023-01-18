@@ -11,16 +11,16 @@
 </body>
 </html>
 <?php 
-require ('add-to-cart.php');
 if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])){
-    echo "<ul class='panier'>";
     foreach($_SESSION['cart'] as $shoe){
-        echo '<li>' . $shoe["id"] . '</li>';
-        
+        echo '<div class="'.$shoe['product'].'">';    
+        echo "<img src=".$shoe['image_url']."><div>";
+        echo '<p>'.$shoe['price'].'</p>';
+
     }
-    echo "</ul>";
 } else {
     echo "Le panier est vide ! ";
 }
+
 
 ?>

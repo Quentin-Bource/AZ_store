@@ -82,6 +82,7 @@ foreach ($shoes as $shoe){
     echo '</form>';
 };
 require("add-to-cart.php");
+require("panier-achat.php");
 
-print_r ($_SESSION['cart']);
+
 ?>
