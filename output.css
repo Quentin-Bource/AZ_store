@@ -557,6 +557,10 @@ video {
   margin-left: 3.5rem;
 }
 
+.mr-9 {
+  margin-right: 2.25rem;
+}
+
 .flex {
   display: flex;
 }
@@ -587,6 +591,11 @@ video {
 
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.border-gray-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(75 85 99 / var(--tw-border-opacity));
 }
 
 .bg-gray-900 {
@@ -638,6 +647,14 @@ video {
 
 .pr-4 {
   padding-right: 1rem;
+}
+
+.pl-9 {
+  padding-left: 2.25rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .font-sans {

@@ -1,3 +1,6 @@
+<?php
+session_start()
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,36 +13,41 @@
 </head>
 
 <body class="bg-gray-900 text-white ">
-    <header class="flex flex-row justify-around pt-5 font-serif pb-3">
-        <h2 class="">AZ[Store]</h2>
+    <header class="flex flex-row justify-around pt-5 font-serif pb-3 text-xl">
+        <form action="index.php">
+            <button class="">AZ[Store]</button>
+        </form>
         <nav class="navbar mr-5 ml-5">
             <ul class="flex flex-row ">
-                <li class="home mr-2.5">Home</li>
-                <li class="about mr-2.5 ">About</li>
-                <li class="product mr-2.5">Products</li>
+                <li class="home mr-9">Home</li>
+                <li class="about mr-9 ">About</li>
+                <li class="product mr-9">Products</li>
                 <li class="contact ">Contact</li>
             </ul>
         </nav>
-        <div class="">
-            <button class="panier w-5"><img src="./assets//images//cart2.svg" alt="panier"></a></button>
-            <button class="login">Login</button>
+        <div class="flex flex-row">
+            <form action="panier-achat.php">
+                <button class="panier w-5"><img class="text-center w-5" src="./assets/images/cart2.svg" alt="panier"></a></button>
+            </form>
+            <button class="login pl-9">Login</button>
         </div>
 
     </header>
-    <hr>
-    <div class="bg">
-        <h2>Shoe the right one.</h2>
-        <button class="store"><a href="">Aller vous faire foutre</a></button>
-    </div>
-    <div class="carroussel">
-        <h3>Our last products</h3>
-    </div>
+    <hr class="ligne border-gray-600">
+    <main>
+        <div class="bg">
+            <h2>Shoe the right one.</h2>
+            <button class="store"><a href="">Aller vous faire foutre</a></button>
+        </div>
+        <div class="carroussel">
+            <h3>Our last products</h3>
+        </div>
+    </main>
 </body>
 
 </html>
 
 <?php
-session_start();
 
 $shoes =
     [
@@ -68,27 +76,21 @@ $shoes =
             'image_url' => './assets/images/Basket_4.png',
         ],
     ];
+require("add-to-cart.php");
 
 foreach ($shoes as $shoe) {
-    echo "<div class =" . $shoe['product'] . "></div>";
-    echo "<img src=" . $shoe['image_url'] . "><div>";
+    echo '<div class="' . $shoe['product'] . '">';
+    echo "<img src=" . $shoe['image_url'] . ">";
+    echo '<p>' . $shoe['product'] . '</p>';
     echo '<p>' . $shoe['price'] . '</p>';
     echo '<form method="post">';
     echo '<input type="hidden" name="shoe_id" value="' . $shoe["id"] . '">';
     echo '<input type="submit" name="add_to_cart" value="Add to Cart">';
     echo '</form>';
+    echo "</div>";
 };
 
 
-// if (isset($_POST['add_to_cart'])) {
-//     $shoe_id = $_POST['shoe_id'];
-//     if (!isset($_SESSION['cart'])) {
-//         $_SESSION['cart'] = array();
-//     }
-//     array_push($_SESSION['cart'], $shoes[$shoe_id]);
-// };
-// echo '<pre>';
-// print_r($_SESSION['cart']);
-// echo '</pre>';
+
 
 ?>
