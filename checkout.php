@@ -16,7 +16,9 @@ session_start();
 <body class=" bg-gray-900 text-white font-sans ml-7 ">
 
     <header class="flex flex-row justify-around pt-5 font-sans pb-3">
-        <h2 class="">AZ[Store]</h2>
+        <form action="index.php">
+        <button class="">AZ[Store]</button>
+        </form>
         <nav class="navbar mr-5 ml-5">
             <ul class="flex flex-row ">
                 <li class="home mr-2.5">Home</li>
