@@ -9,11 +9,14 @@ session_start()
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="output.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
     <title>A-Z Store</title>
 </head>
 
-<body class="bg-gray-900 text-white ">
-    <header class="flex flex-row justify-around pt-5 font-serif pb-3 text-xl">
+<body class="bg-gray-900 text-white font-Lexend ">
+    <header class="flex flex-row justify-around pt-5 pb-3 text-xl">
         <form action="index.php">
             <button class="">AZ[Store]</button>
         </form>
@@ -36,15 +39,15 @@ session_start()
     <hr class="ligne border-gray-600">
     <main>
         <div class="bg flex flex-row">
-            <div class="flex flex-col self-center p-32">
+            <div class="flex flex-col self-center  p-32">
             <h2 class="titre text-7xl uppercase">Shoe the right <span class=" text-blue-500">one</span>.</h2>
-            <button class=" flex store m-3 rounded-lg bg-blue-500 hover:bg-blue-700 active:bg-blue-900 pl-4 pr-4"><a href="">See our store</a></button>
+            <button class=" mt-5 ml-72 mr-24 rounded-lg bg-blue-500 hover:bg-blue-700 active:bg-blue-900"><a href="">See our store</a></button>
             </div>
-            <img src="./assets/images/shoe_one.png" alt="shoe">
+            <img class=" w-2/5 mt-10 mb-10 mr-10"src="./assets/images/shoe_one.png" alt="shoe">
         </div>
         <hr class="ligne border-gray-600">
-        <h3 class=' text-2xl'> <span class=" text-blue-500">Our</span> last products</h3>
-        <div class="carroussel flex flex-row">
+        <h3 class=' text-2xl m-10'> <span class=" text-blue-500">Our</span> last products</h3>
+        <div class="carroussel flex flex-row justify-around ml-20 mr-20">
 
             <?php
 
@@ -78,10 +81,10 @@ session_start()
             require("add-to-cart.php");
 
             foreach ($shoes as $shoe) {
-                echo '<div class="bg-gray-800 max-w-xl items-center rounded-lg p-5 ' . $shoe['product'] . ' w-25">';
-                echo "<img src=" . $shoe['image_url'] . " class='w-20'>";
+                echo '<div class="bg-gray-800 max-w-xl items-center rounded-lg p-5 ' . $shoe['product'] . '">';
+                echo "<img src=" . $shoe['image_url'] . " class=' pb-5 w-40 h-auto'>";
                 echo '<p class="nom text-xl">' . $shoe['product'] . '</p>';
-                echo '<p>' . $shoe['price'] . '</p>';
+                echo '<p class=" text-xl">' . $shoe['price'] . '</p>';
                 echo '<form method="post">';
                 echo '<input type="hidden" name="shoe_id" value="' . $shoe["id"] . '">';
                 echo '<input class=" m-3 rounded-lg bg-blue-500 hover:bg-blue-700 active:bg-blue-900 pl-4 pr-4" type="submit" name="add_to_cart" value="Add to Cart">';
@@ -90,7 +93,17 @@ session_start()
             };
 
             ?>
+            
         </div>
+        <div class="flex flex-col items-center">
+        <img class=" w-72 pt-10" src="./assets/images/shoe_two.png" alt="shoe2">
+        <p class=" text-7xl p-6 uppercase text-center">We provide you <br> the <span class=" text-blue-500">best</span> quality.</p>
+        <p class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam pariatur possimus fuga facilis repellendus ipsum aut est
+             id nostrum minus ea, aliquam perspiciatis fugit rerum ab praesentium odit
+              fugiat repellat.</p>
+        </div>
+
+
     </main>
 </body>
 
