@@ -18,7 +18,7 @@ session_start()
 <body class="bg-gray-900 text-white font-Lexend ">
     <header class="flex flex-row justify-around pt-5 pb-3 text-xl">
         <form action="index.php">
-            <button class="">AZ[Store]</button>
+            <button class="text-2xl">AZ[Store]</button>
         </form>
         <nav class="navbar mr-5 ml-5">
             <ul class="flex flex-row ">
@@ -41,7 +41,7 @@ session_start()
         <div class="bg flex flex-row">
             <div class="flex flex-col self-center  p-32">
             <h2 class="titre text-7xl uppercase">Shoe the right <span class=" text-blue-500">one</span>.</h2>
-            <button class=" mt-5 ml-72 mr-24 rounded-lg bg-blue-500 hover:bg-blue-700 active:bg-blue-900"><a href="">See our store</a></button>
+            <button class=" m-3 rounded-lg bg-blue-500 hover:bg-blue-700 active:bg-blue-900 pl-4 pr-4 p-6 ml-12 w-44 mt-8"><a href="">See our store</a></button>
             </div>
             <img class=" w-2/5 mt-10 mb-10 mr-10"src="./assets/images/shoe_one.png" alt="shoe">
         </div>

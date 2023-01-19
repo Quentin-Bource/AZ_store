@@ -59,7 +59,7 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
     echo "Le panier est vide ! ";
 };
 
-echo "<p class='bg-gray-800 max-w-xl rounded-lg p-5 mt-12 flex flex-col items-center font-Lexend'> Le total de votre panier est de ".$total . " €</p>"
+echo "<p class='bg-gray-800 max-w-xl rounded-lg p-5 mt-12 flex flex-col items-center font-Lexend mb-6'> Le total de votre panier est de ".$total . " €</p>"
 ?>
 
 <form action="checkout.php">

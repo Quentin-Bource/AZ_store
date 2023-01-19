@@ -17,7 +17,7 @@ session_start();
 
     <header class="flex flex-row justify-around pt-5 font-sans pb-3">
         <form action="index.php">
-        <button class="">AZ[Store]</button>
+        <button class="text-2xl">AZ[Store]</button>
         </form>
         <nav class="navbar mr-5 ml-5">
             <ul class="flex flex-row ">
@@ -35,20 +35,19 @@ session_start();
     </header>
     <hr>
     <form action="panier-achat.php">
-    <button type="submit" class="text-xl ml-6 mt-6 pb-4 pt-2 rounded-lg bg-blue-500 hover:bg-blue-700 active:bg-blue-900 pl-4 pr-4"> ← Retour au panier </button>
+    <button type="submit" class="text-xl ml-6 mt-6 mb-6 pb-4 pt-2 rounded-lg bg-blue-500 hover:bg-blue-700 active:bg-blue-900 pl-4 pr-4"> ← Retour au panier </button>
     </form>
     <div id="products">
         <div id="product">
 
 <?php
 require("add-to-cart.php");
-require("buttonremove.php");
 //require("panier-achat.php");
 
 if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) { 
-    echo "<form method='post' class='flex flex-wrap items-center  ' >";
+    echo "<form method='post' class='flex flex-col items-center'>";
     foreach ($_SESSION['cart'] as $key=> $shoe) {
-        echo '<div class="bg-gray-800 max-w-xl m-3 h-64 justify-end flex flex-col items-center rounded-lg p-5 ' . $shoe['product'] . ' pb-5 mb-4 mt-2">';
+        echo '<div class="bg-gray-800 max-w-xl flex flex-col items-center rounded-lg p-5 ' . $shoe['product'] . ' pb-5 mb-4 mt-2">';
         echo "<img  src=" . $shoe['image_url'] . " class='w-40 ' >";
         echo '<p class="text-base mb-2">'  . $shoe['product'] . '</p>';
         echo '<p>' . $shoe['price'] . '</p>';
@@ -187,8 +186,10 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
             }
 
 
+
+
             if (count($errors) === 0) {
-                echo '<p class="text-xl italic mb-2 p-2">Merci pour votre commande !</p>';
+                echo '<p class="text-base italic p-2">Merci pour votre commande !</p>';
             } else {
 
                 foreach ($errors as $error) {
@@ -196,12 +197,7 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
                 }
                 echo 'warning';
             }
-
-          
-
         }
-
-      //  $_SESSION['cart'] = array();
     }
 
 
