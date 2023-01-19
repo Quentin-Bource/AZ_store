@@ -43,16 +43,15 @@ session_start();
 
 <?php
 require("add-to-cart.php");
-//require("panier-achat.php");
+
 
 if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) { 
     echo "<form method='post' class='flex flex-wrap items-center'>";
     foreach ($_SESSION['cart'] as $key=> $shoe) {
-        echo '<div class="bg-gray-800 max-w-xl flex flex-col justify-end items-center rounded-lg p-5 h-72 mb-4 mr-4 ml-4' . $shoe['product'] . ' ">';
+        echo '<div class="bg-gray-800 max-w-xl flex flex-col justify-end items-center rounded-lg p-5 h-52 mb-4 mr-4 ml-4' . $shoe['product'] . ' ">';
         echo "<img  src=" . $shoe['image_url'] . " class='w-40 ' >";
         echo '<p class="text-base mb-2">'  . $shoe['product'] . '</p>';
         echo '<p>' . $shoe['price'] . '</p>';
-        echo '<input class=" m-3 rounded-lg bg-blue-500 hover:bg-blue-700 active:bg-blue-900 pl-4 pr-4" type="submit" value="Supprimer" name="remove'.$shoe['id'].'">';
         echo "</div>";
     }
     echo "</form>";

@@ -19,7 +19,7 @@ $_SESSION['cart']=[];
 <body class="bg-gray-900 text-white ">
     <header class="flex flex-row justify-around pt-5 font-Lexend pb-3">
         <form action="index.php">
-            <button class="">AZ[Store]</button>
+            <button class="text-2xl">AZ[Store]</button>
         </form>
         <nav class="navbar mr-5 ml-5">
             <ul class="flex flex-row ">
