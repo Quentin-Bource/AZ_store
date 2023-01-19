@@ -2,7 +2,12 @@
 module.exports = {
   content: ["*{html,js,php}"],
   theme: {
-    extend: {},
+    extend: 
+    { fontFamily:
+      {
+      'Lexend': ['Lexend', 'sans-serif'],
+      } 
+    },
   },
   plugins: [],
 }
