@@ -81,13 +81,13 @@ session_start()
             require("add-to-cart.php");
 
             foreach ($shoes as $shoe) {
-                echo '<div class="bg-gray-800 max-w-xl items-center rounded-lg p-5 ' . $shoe['product'] . '">';
-                echo "<img src=" . $shoe['image_url'] . " class=' pb-5 w-40 h-auto'>";
-                echo '<p class="nom text-xl">' . $shoe['product'] . '</p>';
-                echo '<p class=" text-xl">' . $shoe['price'] . '</p>';
+                echo '<div class="bg-gray-800 items-center rounded-lg p-5 mr-8' . $shoe['product'] . '">';
+                echo "<img class =' w-48 h-36'src=" . $shoe['image_url'].">";
+                echo '<p class="nom text-xl text-center">' . $shoe['product'] . '</p>';
+                echo '<p class=" text-xl text-center">' . $shoe['price'] . '</p>';
                 echo '<form method="post">';
                 echo '<input type="hidden" name="shoe_id" value="' . $shoe["id"] . '">';
-                echo '<input class=" m-3 rounded-lg bg-blue-500 hover:bg-blue-700 active:bg-blue-900 pl-4 pr-4" type="submit" name="add_to_cart" value="Add to Cart">';
+                echo '<input class=" m-3 rounded-lg bg-blue-500 hover:bg-blue-700 active:bg-blue-900 pl-4 pr-4 p-2 ml-8 mt-6" type="submit" name="add_to_cart" value="Add to Cart">';
                 echo '</form>';
                 echo "</div>";
             };
