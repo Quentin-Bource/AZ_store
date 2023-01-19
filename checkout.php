@@ -40,12 +40,13 @@ session_start();
 
 <?php
 require("add-to-cart.php");
+require("buttonremove.php");
 //require("panier-achat.php");
 
 if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) { 
-    echo "<form method='post' class='flex flex-col items-center'>";
+    echo "<form method='post' class='flex flex-wrap items-center  ' >";
     foreach ($_SESSION['cart'] as $key=> $shoe) {
-        echo '<div class="bg-gray-800 max-w-xl flex flex-col items-center rounded-lg p-5 ' . $shoe['product'] . ' pb-5 mb-4 mt-2">';
+        echo '<div class="bg-gray-800 max-w-xl m-3 h-64 justify-end flex flex-col items-center rounded-lg p-5 ' . $shoe['product'] . ' pb-5 mb-4 mt-2">';
         echo "<img  src=" . $shoe['image_url'] . " class='w-40 ' >";
         echo '<p class="text-base mb-2">'  . $shoe['product'] . '</p>';
         echo '<p>' . $shoe['price'] . '</p>';
@@ -184,10 +185,8 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
             }
 
 
-
-
             if (count($errors) === 0) {
-                echo '<p class="text-base italic p-2">Merci pour votre commande !</p>';
+                echo '<p class="text-xl italic mb-2 p-2">Merci pour votre commande !</p>';
             } else {
 
                 foreach ($errors as $error) {
@@ -195,7 +194,12 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
                 }
                 echo 'warning';
             }
+
+          
+
         }
+
+      //  $_SESSION['cart'] = array();
     }
 
 
