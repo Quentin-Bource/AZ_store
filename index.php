@@ -77,7 +77,7 @@ session_start()
                     ],
                 ];
             require("add-to-cart.php");
-
+            
             foreach ($shoes as $shoe) {
                 echo '<div class="bg-gray-800 items-center rounded-lg p-5 mr-8' . $shoe['product'] . '">';
                 echo "<img class =' w-48 h-36'src=" . $shoe['image_url'].">";
