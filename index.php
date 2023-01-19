@@ -22,9 +22,7 @@ session_start()
         </form>
         <nav class="navbar mr-5 ml-5">
             <ul class="flex flex-row ">
-                <li class="home mr-9">Home</li>
                 <li class="about mr-9 ">About</li>
-                <li class="product mr-9">Products</li>
                 <li class="contact ">Contact</li>
             </ul>
         </nav>
@@ -43,7 +41,7 @@ session_start()
             <h2 class="titre text-7xl uppercase">Shoe the right <span class=" text-blue-500">one</span>.</h2>
             <button class=" m-3 rounded-lg bg-blue-500 hover:bg-blue-700 active:bg-blue-900 pl-4 pr-4 p-6 ml-12 w-44 mt-8"><a href="">See our store</a></button>
             </div>
-            <img class=" w-2/5 mt-10 mb-10 mr-10"src="./assets/images/shoe_one.png" alt="shoe">
+            <img class=" mt-10 mb-10 mr-10"src="./assets/images/shoe_one.png" alt="shoe">
         </div>
         <hr class="ligne border-gray-600">
         <h3 class=' text-2xl m-10'> <span class=" text-blue-500">Our</span> last products</h3>
