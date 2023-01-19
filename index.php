@@ -98,11 +98,33 @@ session_start()
         <div class="flex flex-col items-center">
         <img class=" w-72 pt-10" src="./assets/images/shoe_two.png" alt="shoe2">
         <p class=" text-7xl p-6 uppercase text-center">We provide you <br> the <span class=" text-blue-500">best</span> quality.</p>
-        <p class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam pariatur possimus fuga facilis repellendus ipsum aut est
+        <p class=" text-center m-6 pr-32 pl-32">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam pariatur possimus fuga facilis repellendus ipsum aut est
              id nostrum minus ea, aliquam perspiciatis fugit rerum ab praesentium odit
               fugiat repellat.</p>
         </div>
+        <section class=" flex flex-row text-center">
+            <div>
+                <img src="./assets/images/image-emily.jpg" alt="Emily">
+                <h3>Emily from xyz</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium sequi natus vero distinctio cupiditate quas debitis reiciendis.</p>
+                
+            </div>
+            <div>
+                <img src="./assets/images/image-jennie.jpg" alt="Emily">
+                <h3>Emily from Nike</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium sequi natus vero distinctio cupiditate quas debitis reiciendis.</p>
+                
+            </div>
+            <div>
+                <img src="./assets/images/image-thomas.jpg" alt="Emily">
+                <h3>Emily from Adidas</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium sequi natus vero distinctio cupiditate quas debitis reiciendis.</p>
+                
 
+            </div>
+
+        </section>
+            
 
     </main>
 </body>
