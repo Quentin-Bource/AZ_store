@@ -553,6 +553,10 @@ video {
   margin-top: 1.5rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -589,16 +593,12 @@ video {
   margin-right: 2.25rem;
 }
 
-.mt-5 {
-  margin-top: 1.25rem;
+.ml-12 {
+  margin-left: 3rem;
 }
 
-.ml-72 {
-  margin-left: 18rem;
-}
-
-.mr-24 {
-  margin-right: 6rem;
+.mt-8 {
+  margin-top: 2rem;
 }
 
 .mt-10 {
@@ -625,32 +625,12 @@ video {
   margin-top: 3rem;
 }
 
-.mt-4 {
-  margin-top: 1rem;
-}
-
-.mt-8 {
-  margin-top: 2rem;
-}
-
-.ml-12 {
-  margin-left: 3rem;
-}
-
-.mb-6 {
-  margin-bottom: 1.5rem;
-}
-
 .flex {
   display: flex;
 }
 
 .hidden {
   display: none;
-}
-
-.h-64 {
-  height: 16rem;
 }
 
 .h-auto {
@@ -669,6 +649,10 @@ video {
   width: 12rem;
 }
 
+.w-44 {
+  width: 11rem;
+}
+
 .w-2\/5 {
   width: 40%;
 }
@@ -683,10 +667,6 @@ video {
 
 .w-56 {
   width: 14rem;
-}
-
-.w-44 {
-  width: 11rem;
 }
 
 .max-w-xl {
@@ -711,10 +691,6 @@ video {
 
 .items-center {
   align-items: center;
-}
-
-.justify-end {
-  justify-content: flex-end;
 }
 
 .justify-around {
@@ -770,14 +746,6 @@ video {
   padding: 1.5rem;
 }
 
-.p-10 {
-  padding: 2.5rem;
-}
-
-.p-6 {
-  padding: 1.5rem;
-}
-
 .pt-5 {
   padding-top: 1.25rem;
 }
@@ -805,6 +773,7 @@ video {
 .pb-5 {
   padding-bottom: 1.25rem;
 }
+
 .pl-3 {
   padding-left: 0.75rem;
 }
@@ -833,11 +802,9 @@ video {
   font-family: Lexend, sans-serif;
 }
 
-.font-sans {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-  .font-serif {
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-xl {
@@ -848,16 +815,6 @@ video {
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-.text-7xl {
-  font-size: 4.5rem;
-  line-height: 1;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 .text-7xl {
