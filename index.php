@@ -41,7 +41,7 @@ session_start()
             <h2 class="titre text-7xl uppercase">Shoe the right <span class=" text-blue-500">one</span>.</h2>
             <button class=" m-3 rounded-lg bg-blue-500 hover:bg-blue-700 active:bg-blue-900 pl-4 pr-4 p-6 ml-12 w-44 mt-8"><a href="">See our store</a></button>
             </div>
-            <img class=" w-2/5 mt-10 mb-10 mr-10"src="./assets/images/shoe_one.png" alt="shoe">
+            <img class=" mt-10 mb-10 mr-10"src="./assets/images/shoe_one.png" alt="shoe">
         </div>
         <hr class="ligne border-gray-600">
         <h3 class=' text-2xl m-10'> <span class=" text-blue-500">Our</span> last products</h3>
@@ -101,22 +101,22 @@ session_start()
               fugiat repellat.</p>
         </div>
         <section class=" flex flex-row text-center">
-            <div>
-                <img src="./assets/images/image-emily.jpg" alt="Emily">
-                <h3>Emily from xyz</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium sequi natus vero distinctio cupiditate quas debitis reiciendis.</p>
+            <div class=" flex flex-col justify-center">
+                <img src="./assets/images/image-emily.jpg" class="rounded-full w-32 ml-auto mr-auto pb-4" alt="Emily">
+                <h3 class="pb-4">Emily from xyz</h3>
+                <p class="pb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium sequi natus vero distinctio cupiditate quas debitis reiciendis.</p>
                 
             </div>
             <div>
-                <img src="./assets/images/image-jennie.jpg" alt="Emily">
-                <h3>Emily from Nike</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium sequi natus vero distinctio cupiditate quas debitis reiciendis.</p>
+                <img src="./assets/images/image-jennie.jpg" class="rounded-full w-32 ml-auto mr-auto pb-4" alt="Emily">
+                <h3 class="pb-4">Emily from Nike</h3>
+                <p class="pb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium sequi natus vero distinctio cupiditate quas debitis reiciendis.</p>
                 
             </div>
             <div>
-                <img src="./assets/images/image-thomas.jpg" alt="Emily">
-                <h3>Emily from Adidas</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium sequi natus vero distinctio cupiditate quas debitis reiciendis.</p>
+                <img src="./assets/images/image-thomas.jpg" class="rounded-full w-32 ml-auto mr-auto pb-4" alt="Emily">
+                <h3 class="pb-4">Emily from Adidas</h3>
+                <p class="pb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium sequi natus vero distinctio cupiditate quas debitis reiciendis.</p>
                 
 
             </div>
@@ -125,6 +125,19 @@ session_start()
             
 
     </main>
+
+    <hr class="ligne border-gray-600">
+
+        <footer>
+        <nav class="flex justify-center">
+            
+                <a class="p-4">Home</a>
+                <a class="p-4">About</a>
+                <a class="p-4">Product</a>
+                <a class="p-4">Contact</a>
+            
+        </nav>
+        </footer>
 </body>
 
 </html>

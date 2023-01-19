@@ -46,9 +46,9 @@ require("add-to-cart.php");
 //require("panier-achat.php");
 
 if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) { 
-    echo "<form method='post' class='flex flex-col items-center'>";
+    echo "<form method='post' class='flex flex-wrap items-center'>";
     foreach ($_SESSION['cart'] as $key=> $shoe) {
-        echo '<div class="bg-gray-800 max-w-xl flex flex-col items-center rounded-lg p-5 ' . $shoe['product'] . ' pb-5 mb-4 mt-2">';
+        echo '<div class="bg-gray-800 max-w-xl flex flex-col justify-end items-center rounded-lg p-5 h-72 mb-4 mr-4 ml-4' . $shoe['product'] . ' ">';
         echo "<img  src=" . $shoe['image_url'] . " class='w-40 ' >";
         echo '<p class="text-base mb-2">'  . $shoe['product'] . '</p>';
         echo '<p>' . $shoe['price'] . '</p>';
