@@ -1,5 +1,9 @@
 <?php
-session_start()
+session_start();
+
+require('add-to-cart.php');
+
+$_SESSION['cart']=[];
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -192,6 +192,8 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
 
             if (count($errors) === 0) {
                 echo '<p class="text-xl italic mb-2 p-2">Merci pour votre commande !</p>';
+        
+                
             } else {
 
                 foreach ($errors as $error) {
@@ -203,6 +205,8 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
             
 
         }
+
+
 
         header('Location: ./merci-achat.php');
         exit;
