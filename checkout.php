@@ -9,21 +9,22 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <link rel="stylesheet" href="output.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
     <title>Checkout</title>
 
 </head>
 
-<body class=" bg-gray-900 text-white ml-7 font-Lexend ">
+<body class=" bg-gray-900 text-white font-Lexend ml-7 ">
 
-    <header class="flex flex-row justify-around pt-5 font-sans pb-3">
+    <header class="flex flex-row justify-around pt-5 font-Lexend pb-3">
         <form action="index.php">
         <button class="text-2xl">AZ[Store]</button>
         </form>
         <nav class="navbar mr-5 ml-5">
             <ul class="flex flex-row ">
-                <li class="home mr-2.5">Home</li>
                 <li class="about mr-2.5 ">About</li>
-                <li class="product mr-2.5">Products</li>
                 <li class="contact ">Contact</li>
             </ul>
         </nav>
@@ -61,35 +62,35 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
     </div>
 
 
-    <form method="POST" action="checkout.php" class="leading-8 ml-8 pb-4">
+    <form method="POST" action="merci-achat.php" class="leading-8 ml-8 pb-4">
         <p>
             <label class="w-48 " for="name">Firstname</label>
-            <input class="bg-gray-600 rounded-lg ml-3 mb-3" type="text" name="firstname" placeholder="  Firstname" id='firstname' required><br>
+            <input class="bg-gray-600 rounded-lg ml-3 mb-3 pl-3 max-w-full" type="text" name="firstname" placeholder="Firstname" id='firstname' required><br>
         </p>
 
         <p>
             <label for="name">Name</label>
-            <input class="bg-gray-600 rounded-lg ml-10 mb-3" type="text" name="name" placeholder="  Name" id="name" required><br>
+            <input class="bg-gray-600 rounded-lg ml-10 mb-3 pl-3 max-w-full" type="text" name="name" placeholder="Name" id="name" required><br>
         </p>
 
         <p>
             <label for="name">E-mail</label>
-            <input class="bg-gray-600 rounded-lg ml-10 mb-3" type="text" name="email" placeholder="  E-mail" id="email" required><br>
+            <input class="bg-gray-600 rounded-lg ml-10 mb-3 pl-3 max-w-full" type="text" name="email" placeholder="E-mail" id="email" required><br>
         </p>
 
         <p>
             <label for="name">Address</label>
-            <input class="bg-gray-600 rounded-lg ml-6 mb-3" type="text" name="address" placeholder="  Address" id="address" required><br>
+            <input class="bg-gray-600 rounded-lg ml-6 mb-3 pl-3 max-w-full" type="text" name="address" placeholder="Address" id="address" required><br>
         </p>
 
         <p>
             <label for="zipcode">Zip Code</label>
-            <input class="bg-gray-600 rounded-lg ml-5 mb-3" type="text" pattern="[0-9]*" name="zipcode" placeholder="  Zip-code" id="zipcode" maxlength="6" minlength="4" required><br>
+            <input class="bg-gray-600 rounded-lg ml-5 mb-3 pl-3 max-w-full" type="text" pattern="[0-9]*" name="zipcode" placeholder="Zip-code" id="zipcode" maxlength="6" minlength="4" required><br>
         </p>
 
         <p>
             <label for="name">City</label>
-            <input class="bg-gray-600 rounded-lg ml-14 mb-3" type="text" name="city" placeholder="  City" id="city" required><br>
+            <input class="bg-gray-600 rounded-lg ml-14 mb-3 pl-3 max-w-full" type="text" name="city" placeholder="City" id="city" required><br>
         </p>
 
         <label for="country">Country</label>
@@ -100,7 +101,9 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
             <option value=" Netherlands">Netherland</option>
         </select>
 
+        
         <input class="ml-3 rounded-lg bg-blue-500 hover:bg-blue-700 active:bg-blue-900 pl-4 pr-4" type="submit" name="submit" value="Submit">
+       
 
     </form>
 
@@ -189,7 +192,9 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
 
 
             if (count($errors) === 0) {
-                echo '<p class="text-base italic p-2">Merci pour votre commande !</p>';
+                echo '<p class="text-xl italic mb-2 p-2">Merci pour votre commande !</p>';
+        
+                
             } else {
 
                 foreach ($errors as $error) {
@@ -197,7 +202,17 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
                 }
                 echo 'warning';
             }
+
+            
+
         }
+
+
+
+        header('Location: ./merci-achat.php');
+        exit;
+     
+
     }
 
 

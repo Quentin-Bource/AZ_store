@@ -22,9 +22,7 @@ session_start()
         </form>
         <nav class="navbar mr-5 ml-5">
             <ul class="flex flex-row ">
-                <li class="home mr-9">Home</li>
                 <li class="about mr-9 ">About</li>
-                <li class="product mr-9">Products</li>
                 <li class="contact ">Contact</li>
             </ul>
         </nav>
