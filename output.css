@@ -633,6 +633,14 @@ video {
   margin-right: 24rem;
 }
 
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
+}
+
 .flex {
   display: flex;
 }
@@ -671,6 +679,14 @@ video {
 
 .w-72 {
   width: 18rem;
+}
+
+.w-96 {
+  width: 24rem;
+}
+
+.w-56 {
+  width: 14rem;
 }
 
 .max-w-xl {

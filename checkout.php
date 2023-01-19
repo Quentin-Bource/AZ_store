@@ -13,7 +13,7 @@ session_start();
 
 </head>
 
-<body class=" bg-gray-900 text-white font-sans ml-7 ">
+<body class=" bg-gray-900 text-white ml-7 font-Lexend ">
 
     <header class="flex flex-row justify-around pt-5 font-sans pb-3">
         <form action="index.php">
@@ -34,9 +34,9 @@ session_start();
 
     </header>
     <hr>
-
-    <h2 class="text-xl pb-4 pt-2">Checkout</h2>
-
+    <form action="panier-achat.php">
+    <button type="submit" class="text-xl ml-6 mt-6 pb-4 pt-2 rounded-lg bg-blue-500 hover:bg-blue-700 active:bg-blue-900 pl-4 pr-4"> ← Retour au panier </button>
+    </form>
     <div id="products">
         <div id="product">
 
