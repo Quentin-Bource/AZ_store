@@ -16,7 +16,7 @@ session_start();
     <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-gray-900 text-white">
+<body class="bg-gray-900 text-white font-Lexend">
     <header class="flex flex-row justify-around pt-5 font-serif pb-3">
         <form action="index.php">
             <button class="">AZ[Store]</button>
@@ -32,15 +32,15 @@ session_start();
 
     </header>
     <hr class="ligne border-gray-600">
-    <div class="all_basket">
+    <div class="all_basket class='flex flex-col '">
         <?php
             require ("buttonremove.php");
             require("add-to-cart.php");
 
 if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) { 
-    echo "<form method='post'>";
+    echo "<form method='post' >";
     foreach ($_SESSION['cart'] as $key=> $shoe) {
-        echo '<div class="bg-gray-800 max-w-xl flex flex-col items-center rounded-lg p-5 ' . $shoe['product'] . ' pb-5 mb-4 mt-2">';
+        echo '<div class="bg-gray-800 max-w-xl rounded-lg p-5 justify-center' . $shoe['product'] . ' pb-5 mb-4 mt-2">';
         echo "<img  src=" . $shoe['image_url'] . " class='w-40 ' >";
         echo '<p class="text-base mb-2 font-Lexend ">'  . $shoe['product'] . '</p>';
         echo '<p class ="font-Lexend">' . $shoe['price'] . '</p>';
