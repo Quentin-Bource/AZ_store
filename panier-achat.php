@@ -16,39 +16,52 @@ session_start();
     <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-gray-900 text-white font-Lexend">
-    <header class="flex flex-row justify-around pt-5 font-serif pb-3">
+<body class="bg-gray-900 text-white">
+    <header class="flex flex-row justify-around pt-5 font-Lexend pb-3 text-xl">
         <form action="index.php">
-            <button class="">AZ[Store]</button>
+            <button class="text-2xl">AZ[Store]</button>
         </form>
         <nav class="navbar mr-5 ml-5">
             <ul class="flex flex-row ">
-                <li class="home mr-2.5">Home</li>
-                <li class="about mr-2.5 ">About</li>
-                <li class="product mr-2.5">Products</li>
+                <li class="home mr-9">Home</li>
+                <li class="about mr-9 ">About</li>
+                <li class="product mr-9">Products</li>
                 <li class="contact ">Contact</li>
             </ul>
         </nav>
-
     </header>
     <hr class="ligne border-gray-600">
-    <div class="all_basket class='flex flex-col '">
+     <form action="index.php">
+        <button type="submit" class="text-xl ml-6 mt-6 pb-4 pt-2 rounded-lg bg-blue-500 hover:bg-blue-700 active:bg-blue-900 pl-4 pr-4"> ← Page d'accueil</button>
+    </form> 
+    <div class="all_basket flex flex-col flex-wrap items-center ">
         <?php
             require ("buttonremove.php");
             require("add-to-cart.php");
 
 if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) { 
-    echo "<form method='post' >";
+    foreach ($_SESSION['cart']as $i => $value){
+        $total= $total+ ($_SESSION['cart'][$i]['price']);
+    }
+    echo "<form method='post' class='flex flex-col  w-96'>";
     foreach ($_SESSION['cart'] as $key=> $shoe) {
-        echo '<div class="bg-gray-800 max-w-xl rounded-lg p-5 justify-center' . $shoe['product'] . ' pb-5 mb-4 mt-2">';
-        echo "<img  src=" . $shoe['image_url'] . " class='w-40 ' >";
-        echo '<p class="text-base mb-2 font-Lexend ">'  . $shoe['product'] . '</p>';
-        echo '<p class ="font-Lexend">' . $shoe['price'] . '</p>';
-        echo '<input class=" m-3 rounded-lg bg-blue-500 hover:bg-blue-700 active:bg-blue-900 pl-4 pr-4 p-6" type="submit" value="Supprimer" name="remove'.$shoe['id'].'">';
+        echo '<div class="bg-gray-800 max-w-xl rounded-lg p-5 mt-12 flex flex-col items-center' . $shoe['product'] . ' pb-5 mb-4 ">';
+        echo "<img  src=" . $shoe['image_url'] . ">";
+        echo '<p class="text-base mb-2 font-Lexend text-center">'  . $shoe['product'] . '</p>';
+        echo '<p class="font-Lexend text-center">' . $shoe['price'] . '</p>';
+        echo '<input class=" m-3 rounded-lg bg-blue-500 hover:bg-blue-700 active:bg-blue-900 pl-4 pr-4 p-6 ml-8" type="submit" value="Supprimer" name="remove'.$shoe['id'].'">';
         echo "</div>";
     }
+    echo "</p>";
     echo "</form>";
+
 } else {
     echo "Le panier est vide ! ";
 };
+
+echo "<p class='bg-gray-800 max-w-xl rounded-lg p-5 mt-12 flex flex-col items-center font-Lexend'> Le total de votre panier est de ".$total . " €</p>"
 ?>
+
+<form action="checkout.php">
+    <button type="submit" name="paiement" class="m-3 w-56 rounded-lg bg-blue-500 hover:bg-blue-700 active:bg-blue-900 pl-4 pr-4 p-6 ml-8">Paiement</button>
+</form>
