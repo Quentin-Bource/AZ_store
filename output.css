@@ -41,7 +41,7 @@ html {
   -moz-tab-size: 4;
   /* 3 */
   -o-tab-size: 4;
-     tab-size: 4;
+        tab-size: 4;
   /* 3 */
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
@@ -517,6 +517,18 @@ video {
   margin: 0.75rem;
 }
 
+.m-5 {
+  margin: 1.25rem;
+}
+
+.m-7 {
+  margin: 1.75rem;
+}
+
+.m-9 {
+  margin: 2.25rem;
+}
+
 .ml-7 {
   margin-left: 1.75rem;
 }
@@ -609,6 +621,10 @@ video {
   max-width: 36rem;
 }
 
+.flex-auto {
+  flex: 1 1 auto;
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -617,6 +633,9 @@ video {
   flex-direction: column;
 }
 
+.flex-col-reverse {
+  flex-direction: column-reverse;
+}
 .flex-wrap {
   flex-wrap: wrap;
 }
@@ -631,6 +650,10 @@ video {
 
 .justify-around {
   justify-content: space-around;
+}
+
+.self-center {
+  align-self: center;
 }
 
 .rounded-lg {
@@ -668,6 +691,22 @@ video {
 
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.p-9 {
+  padding: 2.25rem;
+}
+
+.p-14 {
+  padding: 3.5rem;
+}
+
+.p-32 {
+  padding: 8rem;
 }
 
 .pt-5 {
@@ -714,6 +753,10 @@ video {
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
+.font-Lexend {
+  font-family: Lexend, sans-serif;
+}
+
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -722,6 +765,44 @@ video {
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-9xl {
+  font-size: 8rem;
+  line-height: 1;
+}
+
+.text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
 }
 
 .italic {
@@ -735,6 +816,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-blue-500 {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity));
 }
 
 .hover\:bg-blue-700:hover {
