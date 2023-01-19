@@ -35,11 +35,15 @@ session_start()
     </header>
     <hr class="ligne border-gray-600">
     <main>
-        <div class="bg">
-            <h2>Shoe the right one.</h2>
-            <button class="store"><a href="">Aller vous faire foutre</a></button>
+        <div class="bg flex flex-row">
+            <div class="flex flex-col self-center p-32">
+            <h2 class="titre text-7xl uppercase">Shoe the right <span class=" text-blue-500">one</span>.</h2>
+            <button class=" flex store m-3 rounded-lg bg-blue-500 hover:bg-blue-700 active:bg-blue-900 pl-4 pr-4"><a href="">See our store</a></button>
+            </div>
+            <img src="./assets/images/shoe_one.png" alt="shoe">
         </div>
-        <h3>Our last products</h3>
+        <hr class="ligne border-gray-600">
+        <h3 class=' text-2xl'> <span class=" text-blue-500">Our</span> last products</h3>
         <div class="carroussel flex flex-row">
 
             <?php
@@ -74,13 +78,13 @@ session_start()
             require("add-to-cart.php");
 
             foreach ($shoes as $shoe) {
-                echo '<div class="' . $shoe['product'] . ' w-25">';
+                echo '<div class="bg-gray-800 max-w-xl items-center rounded-lg p-5 ' . $shoe['product'] . ' w-25">';
                 echo "<img src=" . $shoe['image_url'] . " class='w-20'>";
                 echo '<p class="nom text-xl">' . $shoe['product'] . '</p>';
                 echo '<p>' . $shoe['price'] . '</p>';
                 echo '<form method="post">';
                 echo '<input type="hidden" name="shoe_id" value="' . $shoe["id"] . '">';
-                echo '<input type="submit" name="add_to_cart" value="Add to Cart">';
+                echo '<input class=" m-3 rounded-lg bg-blue-500 hover:bg-blue-700 active:bg-blue-900 pl-4 pr-4" type="submit" name="add_to_cart" value="Add to Cart">';
                 echo '</form>';
                 echo "</div>";
             };

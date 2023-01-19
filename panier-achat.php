@@ -11,6 +11,9 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="output.css">
     <title>A-Z [Store]</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
 </head>
 
 <body class="bg-gray-900 text-white">
@@ -37,11 +40,11 @@ session_start();
 if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) { 
     echo "<form method='post'>";
     foreach ($_SESSION['cart'] as $key=> $shoe) {
-        echo '<div class="' . $shoe['product'] . '">';
-        echo "<img src=" . $shoe['image_url'] . ">";
-        echo '<p>' . $shoe['product'] . '</p>';
-        echo '<p>' . $shoe['price'] . '</p>';
-        echo '<input type="submit" value="Supprimer" name="remove'.$shoe['id'].'">';
+        echo '<div class="bg-gray-800 max-w-xl flex flex-col items-center rounded-lg p-5 ' . $shoe['product'] . ' pb-5 mb-4 mt-2">';
+        echo "<img  src=" . $shoe['image_url'] . " class='w-40 ' >";
+        echo '<p class="text-base mb-2 font-Lexend ">'  . $shoe['product'] . '</p>';
+        echo '<p class ="font-Lexend">' . $shoe['price'] . '</p>';
+        echo '<input class=" m-3 rounded-lg bg-blue-500 hover:bg-blue-700 active:bg-blue-900 pl-4 pr-4 p-6" type="submit" value="Supprimer" name="remove'.$shoe['id'].'">';
         echo "</div>";
     }
     echo "</form>";
